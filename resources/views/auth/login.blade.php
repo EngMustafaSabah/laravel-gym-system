@@ -38,11 +38,12 @@
             <div class="bg-grey-900 padding-40 no-margin-bottom font-size-20 color-white text-center text-uppercase">
                 <img src="{{ asset('assets/img/web/logo.png') }}">
             </div>
-            @lang('messages.Whoops')
+           <a href="">@lang('messages.Change Language To') @lang("messages.ar")</a>
 
             @if (count($errors) > 0)
                 <div class="alert alert-danger">
-                    <strong> @tarns("Whoops!") </strong>There were some problems with your input.<br><br>
+                    <strong> @tarns('Whoops!')
+                    </strong>{{ trans('messages.There were some problems with your input.') }}<br><br>
                     <ul>
                         @foreach ($errors->all() as $error)
                             <li>{{ $error }}</li>
@@ -65,7 +66,7 @@
                     <div class="form-group margin-top-20">
                         <div class="checkbox checkbox-theme">
                             <input type="checkbox" id="remember" name="remember">
-                            <label for="remember">Remember Me</label>
+                            <label for="remember">{{ trans('messages.Remember Me.') }}</label>
                         </div>
                     </div>
 
